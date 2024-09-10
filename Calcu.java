@@ -24,3 +24,35 @@ public class Calcu {
 
         // Perform the chosen operation
         switch (choice) {
+case 1:
+                System.out.println("Result: " + calcu.add((int) num1, (int) num2));
+                break;
+case 2:
+                System.out.println("Result: " + calcu.subtract((int) num1, (int) num2));
+                break;
+ case 3:
+                System.out.println("Result: " + calcu.multiply((int) num1, (int) num2));
+                break;
+case 4:
+                try {
+                    System.out.println("Result: " + calcu.divide(num1, num2));
+                } catch (ArithmeticException e) {
+                    System.out.println(e.getMessage());
+                }
+                break;
+            case 5:
+                try {
+                    System.out.println("Result: " + calcu.modulus((int) num1, (int) num2));
+                } catch (ArithmeticException e) {
+                    System.out.println(e.getMessage());
+                }
+                break;
+            default:
+                System.out.println("Invalid choice.");
+                break;
+        }
+
+        // Close the scanner
+        scanner.close();
+    }
+}
